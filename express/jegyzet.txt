@@ -1,0 +1,30 @@
+npm init -y
+npm i express
+node app/index.js
+npm i -D nodemon
+npm start
+
+git config --global --unset user.name
+git config --global --unset user.email
+
+git config --global --unset Tóth Tamás
+git config --global --unset tamastoth101@gmail.com
+
+git init
+git status -u
+git add --all
+git commit -m 'kezdes'
+
+.gitignore
+    |-node_modules/
+
+
+
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+    res.json({uzenet: 'helló'})
+});
+
+app.listen(8000);
